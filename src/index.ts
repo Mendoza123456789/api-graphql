@@ -16,16 +16,16 @@ const ConnectDB = new DataSource({
     entities: [registro_users],
     synchronize: false,
     logging: false,
-    ssl: false
+    ssl: true
 
 })    
         
         
 ConnectDB.initialize()
 .then(() => {
-    console.log("Conexión Exitosa a la base de datos! ")
+    console.log("¡Conexión Exitosa a la base de datos! ")
 })
-.catch((error) => console.log("ERROR DE CONEXIÓN A LA BASE DATOS | ERROR: ", error))
+.catch((error) => console.log("¡ERROR DE CONEXIÓN A LA BASE DATOS! | ERROR: ", error))
 
 
 app.listen(PORT_LISTEN)
